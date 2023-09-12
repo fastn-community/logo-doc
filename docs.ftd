@@ -240,11 +240,10 @@ string cname:
 + "-- import: " + a + " as hero\\n\\n"
 + "\;; Add this where you want to show the component\\n"
 + "-- hero." + cname +": Title copy goes here\\n"
-+ "cta-primary-text: View more\\n"
-+ "cta-primary-url: /\\n"
-+ "cta-secondary-text: Preview\\n"
-+ "cta-secondary-url: /\\n"
-+ "image: $assets.files.image.svg\\n\\n"
++ "logo-list: list-logo\\n"
++ "full-name: Your name \\n"
++ "company-name: Your company name\\n"
++ "company-logo: $assets.files.image.svg\\n\\1"
 + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum. Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum erat."
 
 
