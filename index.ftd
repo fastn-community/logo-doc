@@ -1,5 +1,6 @@
 -- import: fastn-community.github.io/logo-doc/docs
 -- import: fastn-community.github.io/logo-doc/data
+-- import: fastn-community.github.io/logo-doc/lib
 
 -- docs.home:
 created-by: By **Priyanka**
@@ -16,7 +17,7 @@ preview-url: preview/
 
 
 -- component logo-quote-block:
-optional caption title:
+caption title:
 optional body subtitle:
 data.logos list logo-list: 
 optional string full-name:
@@ -30,8 +31,7 @@ classes: section
 
 -- ftd.desktop:
 
--- logo-quote-block-desktop: $logo-quote-block.title
-subtitle: $logo-quote-block.subtitle
+-- lib.logo-quote-block-desktop: $logo-quote-block.title
 logo-list: $logo-quote-block.logo-list
 full-name: $logo-quote-block.full-name
 company-name: $logo-quote-block.company-name
@@ -41,7 +41,7 @@ company-logo: $logo-quote-block.company-logo
 
 -- ftd.mobile:
 
--- logo-quote-block-mobile: $logo-quote-block.title
+-- lib.logo-quote-block-mobile: $logo-quote-block.title
 body: $logo-quote-block.subtitle
 logo-list: $logo-quote-block.logo-list
 
@@ -60,164 +60,14 @@ logo-list: $logo-quote-block.logo-list
 
 
 
--- component logo-quote-block-desktop:
-optional caption title:
-optional body subtitle:
-data.logos list logo-list: 
-optional string full-name:
-optional string company-name:
-optional ftd.image-src company-logo:
-
--- ftd.row:
-width: fill-container
-spacing.fixed.px: 80
-padding-vertical.px: 111
-padding-horizontal.px: 50
-background.solid: $inherited.colors.background.step-2
-
--- ftd.column:
-spacing.fixed.px: 17
-padding.px: 30
-width.fixed.percent: 50
-background.solid: $inherited.colors.background.base
-
--- ftd.row:
-if: { logo-quote-block-desktop.title != NULL}
-
-
--- ftd.text: "
-role: $inherited.types.heading-large
-color: $inherited.colors.text-strong
-
--- ftd.text: $logo-quote-block-desktop.title
-role: $inherited.types.heading-large
-color: $inherited.colors.text-strong
-
--- ftd.text: "
-role: $inherited.types.heading-large
-color: $inherited.colors.text-strong
-
--- end: ftd.row
-
--- ftd.text:
-if: { logo-quote-block-desktop.subtitle != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-
-$logo-quote-block-desktop.subtitle
-
--- ftd.row:
-
--- ftd.image:
-if: { logo-quote-block-desktop.company-logo !=  NULL }
-src: $logo-quote-block-desktop.company-logo
-
--- ftd.column:
-width: fill-container
-
--- ftd.text: $logo-quote-block-desktop.full-name
-if: { logo-quote-block-desktop.full-name != NULL }
-
-
--- ftd.text: $logo-quote-block-desktop.company-name
-if: { logo-quote-block-desktop.full-name != NULL }
-
--- end: ftd.column
-
--- end: ftd.row
-
--- end: ftd.column
-
--- ftd.row:
-wrap: true
-spacing.fixed.px: 40
-width.fixed.percent: 50
-
-
--- logo-lists:
-$loop$: $logo-quote-block-desktop.logo-list as $obj
-logo: $obj.logo
-link: $obj.link
-
--- end: ftd.row
-
--- end: ftd.row
-
--- end: logo-quote-block-desktop
-
-
-
-
-
-
-
-
-
-
--- component logo-quote-block-mobile:
-optional caption title:
-optional body body:
-data.logos list logo-list:
-
--- ftd.column:
-width: fill-container
-spacing.fixed.px: 24
-padding-vertical.px: 24
-padding-horizontal.px: 24
-background.solid: $inherited.colors.background.step-2
-
--- ftd.column:
-spacing.fixed.px: 17
-padding-top.px: 30
-
--- ftd.text: $logo-quote-block-mobile.title
-if: { logo-quote-block-mobile.title != NULL }
-role: $inherited.types.heading-large
-color: $inherited.colors.text-strong
-
--- ftd.text:
-if: { logo-quote-block-mobile.body != NULL }
-role: $inherited.types.copy-regular
-color: $inherited.colors.text
-
-$logo-quote-block-mobile.body
-
--- end: ftd.column
-
--- ftd.column:
-wrap: true
-spacing.fixed.px: 10
-width: fill-container
-
--- logo-lists:
-$loop$: $logo-quote-block-mobile.logo-list as $obj
-logo: $obj.logo
-link: $obj.link
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: logo-quote-block-mobile
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 -- component logo-large-title:
-optional caption title:
-optional body body:
+caption title:
+optional body subtitle:
 data.logos list logo-list:
-string id: logo-large-title
 
 -- ftd.column:
 width: fill-container
@@ -498,7 +348,7 @@ logo-list: $logo-small-title.logo-list
 
 
 -- component logo-small-title-desktop:
-optional caption title:
+caption title:
 optional body body:
 data.logos list logo-list:
 
