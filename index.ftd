@@ -1,0 +1,752 @@
+-- import: fastn-community.github.io/logo-doc/docs
+-- import: fastn-community.github.io/logo-doc/data
+
+-- docs.home:
+created-by: By **Priyanka**
+preview-url: preview/
+
+
+
+
+
+
+
+
+
+
+
+-- component logo-quote-block:
+optional caption title:
+optional body subtitle:
+data.logos list logo-list: 
+optional string full-name:
+optional string company-name:
+optional ftd.image-src company-logo:
+
+
+-- ftd.column:
+width: fill-container
+classes: section
+
+-- ftd.desktop:
+
+-- logo-quote-block-desktop: $logo-quote-block.title
+subtitle: $logo-quote-block.subtitle
+logo-list: $logo-quote-block.logo-list
+full-name: $logo-quote-block.full-name
+company-name: $logo-quote-block.company-name
+company-logo: $logo-quote-block.company-logo
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- logo-quote-block-mobile: $logo-quote-block.title
+body: $logo-quote-block.subtitle
+logo-list: $logo-quote-block.logo-list
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: logo-quote-block
+
+
+
+
+
+
+
+
+
+
+-- component logo-quote-block-desktop:
+optional caption title:
+optional body subtitle:
+data.logos list logo-list: 
+optional string full-name:
+optional string company-name:
+optional ftd.image-src company-logo:
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 80
+padding-vertical.px: 111
+padding-horizontal.px: 50
+background.solid: $inherited.colors.background.step-2
+
+-- ftd.column:
+spacing.fixed.px: 17
+padding.px: 30
+width.fixed.percent: 50
+background.solid: $inherited.colors.background.base
+
+-- ftd.row:
+if: { logo-quote-block-desktop.title != NULL}
+
+
+-- ftd.text: "
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text: $logo-quote-block-desktop.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text: "
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- end: ftd.row
+
+-- ftd.text:
+if: { logo-quote-block-desktop.subtitle != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$logo-quote-block-desktop.subtitle
+
+-- ftd.row:
+
+-- ftd.image:
+if: { logo-quote-block-desktop.company-logo !=  NULL }
+src: $logo-quote-block-desktop.company-logo
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text: $logo-quote-block-desktop.full-name
+if: { logo-quote-block-desktop.full-name != NULL }
+
+
+-- ftd.text: $logo-quote-block-desktop.company-name
+if: { logo-quote-block-desktop.full-name != NULL }
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.row:
+wrap: true
+spacing.fixed.px: 40
+width.fixed.percent: 50
+
+
+-- logo-lists:
+$loop$: $logo-quote-block-desktop.logo-list as $obj
+logo: $obj.logo
+link: $obj.link
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: logo-quote-block-desktop
+
+
+
+
+
+
+
+
+
+
+-- component logo-quote-block-mobile:
+optional caption title:
+optional body body:
+data.logos list logo-list:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+padding-vertical.px: 24
+padding-horizontal.px: 24
+background.solid: $inherited.colors.background.step-2
+
+-- ftd.column:
+spacing.fixed.px: 17
+padding-top.px: 30
+
+-- ftd.text: $logo-quote-block-mobile.title
+if: { logo-quote-block-mobile.title != NULL }
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+if: { logo-quote-block-mobile.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$logo-quote-block-mobile.body
+
+-- end: ftd.column
+
+-- ftd.column:
+wrap: true
+spacing.fixed.px: 10
+width: fill-container
+
+-- logo-lists:
+$loop$: $logo-quote-block-mobile.logo-list as $obj
+logo: $obj.logo
+link: $obj.link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: logo-quote-block-mobile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component logo-large-title:
+optional caption title:
+optional body body:
+data.logos list logo-list:
+string id: logo-large-title
+
+-- ftd.column:
+width: fill-container
+id: $logo-large-title.id
+
+-- ftd.desktop:
+
+-- logo-large-title-desktop: $logo-large-title.title
+body: $logo-large-title.body
+logo-list: $logo-large-title.logo-list
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- logo-large-title-mobile: $logo-large-title.title
+body: $logo-large-title.body
+logo-list: $logo-large-title.logo-list
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: logo-large-title
+
+
+
+
+
+
+
+
+
+
+-- component logo-large-title-desktop:
+optional caption title:
+optional body body:
+data.logos list logo-list:
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 100
+spacing.fixed.px: 17
+align-content: center
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+
+-- ftd.text: $logo-large-title-desktop.title
+if: { logo-large-title-desktop.title != NULL }
+style: medium
+max-width.fixed.percent: 70
+role: $inherited.types.heading-large
+
+-- ftd.text:
+if: { logo-large-title-desktop.body != NULL }
+max-width.fixed.percent: 70
+text-align: center
+
+$logo-large-title-desktop.body
+
+-- ftd.row:
+margin-top.px: 15
+spacing.fixed.px: 72
+width: fill-container
+overflow-y: auto
+
+-- logo-lists:
+$loop$: $logo-large-title-desktop.logo-list as $obj
+logo: $obj.logo
+link: $obj.link
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: logo-large-title-desktop
+
+
+
+
+-- component logo-large-title-mobile:
+optional caption title:
+optional body body:
+data.logos list logo-list:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 52
+padding-vertical.px: 60
+
+-- ftd.column:
+spacing.fixed.px: 17
+
+-- ftd.text: $logo-large-title-mobile.title
+if: { logo-large-title-mobile.title != NULL }
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+if: { logo-large-title-mobile.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$logo-large-title-mobile.body
+
+-- end: ftd.column
+
+-- ftd.column:
+spacing.fixed.px: 40
+width: fill-container
+
+-- logo-lists:
+$loop$: $logo-large-title-mobile.logo-list as $obj
+logo: $obj.logo
+link: $obj.link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: logo-large-title-mobile
+
+
+
+
+
+
+
+
+-- component logo-without-title:
+data.logos list logo-list:
+
+
+-- ftd.column:
+width: fill-container
+-- ftd.desktop:
+
+-- logo-without-title-desktop:
+logo-list: $logo-without-title.logo-list
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- logo-without-title-mobile: 
+logo-list: $logo-without-title.logo-list
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: logo-without-title
+
+
+
+
+
+
+
+
+
+
+-- component logo-without-title-desktop:
+data.logos list logo-list:
+
+-- ftd.row:
+margin-top.px: 15
+spacing.fixed.px: 72
+width: fill-container
+overflow-y: auto
+align-content: center
+padding-vertical.px: 100
+
+-- logo-lists:
+$loop$: $logo-without-title-desktop.logo-list as $obj
+logo: $obj.logo
+link: $obj.link
+
+-- end: ftd.row
+
+-- end: logo-without-title-desktop
+
+
+
+
+-- component logo-without-title-mobile:
+data.logos list logo-list:
+
+-- ftd.column:
+spacing.fixed.px: 40
+width: fill-container
+spacing.fixed.px: 52
+padding-vertical.px: 60
+
+-- logo-lists:
+$loop$: $logo-without-title-mobile.logo-list as $obj
+logo: $obj.logo
+link: $obj.link
+
+-- end: ftd.column
+
+-- end: logo-without-title-mobile
+
+
+
+
+
+
+
+
+-- component logo-lists:
+ftd.image-src logo:
+string link:
+
+-- ftd.row:
+width.fixed.px: 261
+width if { ftd.device == "mobile"}: fill-container
+align-content: center
+
+
+-- ftd.image:
+src: $logo-lists.logo
+width: auto
+link: $logo-lists.link
+
+-- end: ftd.row
+
+-- end: logo-lists
+
+
+
+
+
+
+
+
+
+
+
+-- component logo-small-title:
+optional caption title:
+optional body body:
+data.logos list logo-list:
+string id: logo-small-title
+
+-- ftd.column:
+width: fill-container
+id: $logo-small-title.id
+
+-- ftd.desktop:
+
+-- logo-small-title-desktop: $logo-small-title.title
+body: $logo-small-title.body
+logo-list: $logo-small-title.logo-list
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- logo-small-title-mobile: $logo-small-title.title
+body: $logo-small-title.body
+logo-list: $logo-small-title.logo-list
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: logo-small-title
+
+
+
+
+
+
+
+
+
+
+-- component logo-small-title-desktop:
+optional caption title:
+optional body body:
+data.logos list logo-list:
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 100
+spacing.fixed.px: 17
+align-content: center
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+
+-- ftd.text: $logo-small-title-desktop.title
+style: medium
+max-width.fixed.percent: 70
+
+-- ftd.text:
+if: { logo-small-title-desktop.body != NULL }
+max-width.fixed.percent: 70
+
+$logo-small-title-desktop.body
+
+-- ftd.row:
+margin-top.px: 15
+spacing.fixed.px: 72
+width: fill-container
+overflow-y: auto
+
+-- logo-lists:
+$loop$: $logo-small-title-desktop.logo-list as $obj
+logo: $obj.logo
+link: $obj.link
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: logo-small-title-desktop
+
+
+
+
+-- component logo-small-title-mobile:
+optional caption title:
+optional body body:
+data.logos list logo-list:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 52
+padding-vertical.px: 60
+
+-- ftd.column:
+spacing.fixed.px: 17
+
+-- ftd.text: $logo-small-title-mobile.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+if: { logo-small-title-mobile.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$logo-small-title-mobile.body
+
+-- end: ftd.column
+
+-- ftd.column:
+spacing.fixed.px: 40
+width: fill-container
+
+-- logo-lists:
+$loop$: $logo-small-title-mobile.logo-list as $obj
+logo: $obj.logo
+link: $obj.link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: logo-small-title-mobile
+
+
+
+-- component logo-quote-divider:
+optional caption title:
+optional body subtitle:
+data.logos list logo-list: 
+optional string full-name:
+optional string company-name:
+optional ftd.image-src company-logo:
+
+
+-- ftd.column:
+width: fill-container
+
+
+-- ftd.desktop:
+
+-- logo-quote-divider-desktop: $logo-quote-divider.title
+body: $logo-quote-divider.subtitle
+logo-list: $logo-quote-divider.logo-list
+full-name: $logo-quote-divider.full-name
+company-name: $logo-quote-divider.company-name
+company-logo: $logo-quote-divider.company-logo
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- logo-quote-divider-mobile: $logo-quote-divider.title
+body: $logo-quote-divider.subtitle
+logo-list: $logo-quote-divider.logo-list
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: logo-quote-divider
+
+
+
+
+
+
+
+
+
+
+-- component logo-quote-divider-desktop:
+optional caption title:
+optional body body:
+data.logos list logo-list: 
+optional string full-name:
+optional string company-name:
+optional ftd.image-src company-logo:
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 80
+padding-vertical.px: 111
+padding-horizontal.px: 50
+background.solid: $inherited.colors.background.step-2
+
+-- ftd.column:
+spacing.fixed.px: 17
+width.fixed.percent: 50
+
+-- ftd.text: $logo-quote-divider-desktop.title
+if: { logo-quote-divider-desktop.title != NULL}
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+if: { logo-quote-divider-desktop.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$logo-quote-divider-desktop.body
+
+-- ftd.row:
+
+-- ftd.image:
+if: { logo-quote-divider-desktop.company-logo !=  NULL }
+src: $logo-quote-divider-desktop.company-logo
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text: $logo-quote-divider-desktop.full-name
+if: { logo-quote-divider-desktop.full-name != NULL }
+
+
+-- ftd.text: $logo-quote-divider-desktop.company-name
+if: { logo-quote-divider-desktop.full-name != NULL }
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.row:
+wrap: true
+spacing.fixed.px: 40
+width.fixed.percent: 50
+
+-- logo-lists:
+$loop$: $logo-quote-divider-desktop.logo-list as $obj
+logo: $obj.logo
+link: $obj.link
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: logo-quote-divider-desktop
+
+
+
+
+
+
+
+
+
+
+-- component logo-quote-divider-mobile:
+caption title:
+body body:
+data.logos list logo-list:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+padding-vertical.px: 24
+padding-horizontal.px: 24
+
+
+-- ftd.column:
+spacing.fixed.px: 17
+padding-top.px: 30
+
+-- ftd.text: $logo-quote-divider-mobile.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$logo-quote-divider-mobile.body
+
+-- end: ftd.column
+
+-- ftd.column:
+wrap: true
+spacing.fixed.px: 10
+width: fill-container
+
+-- logo-lists:
+$loop$: $logo-quote-divider-mobile.logo-list as $obj
+logo: $obj.logo
+link: $obj.link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: logo-quote-divider-mobile
