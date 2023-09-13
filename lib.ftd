@@ -26,15 +26,7 @@ background.solid: $inherited.colors.background.base
 if: { logo-quote-block-desktop.title != NULL}
 
 
--- ftd.text: "
-role: $inherited.types.heading-large
-color: $inherited.colors.text-strong
-
--- ftd.text: $logo-quote-block-desktop.title
-role: $inherited.types.heading-large
-color: $inherited.colors.text-strong
-
--- ftd.text: "
+-- ftd.text: $with-quotes(a = $logo-quote-block-desktop.title)
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 
@@ -48,10 +40,13 @@ color: $inherited.colors.text
 $logo-quote-block-desktop.subtitle
 
 -- ftd.row:
+spacing.fixed.px: 20
+align-content: center
 
 -- ftd.image:
 if: { logo-quote-block-desktop.company-logo !=  NULL }
 src: $logo-quote-block-desktop.company-logo
+width.fixed.px: 40
 
 -- ftd.column:
 width: fill-container
@@ -445,10 +440,13 @@ color: $inherited.colors.text
 $logo-quote-divider-desktop.subtitle
 
 -- ftd.row:
+spacing.fixed.px: 20
+align-content: center
 
 -- ftd.image:
 if: { logo-quote-divider-desktop.company-logo !=  NULL }
 src: $logo-quote-divider-desktop.company-logo
+width.fixed.px: 40
 
 -- ftd.column:
 width: fill-container
@@ -535,3 +533,11 @@ link: $obj.link
 -- end: ftd.column
 
 -- end: logo-quote-divider-mobile
+
+
+
+-- string with-quotes(a):
+string a:
+
+
+"“" + a + "”"

@@ -9,7 +9,7 @@ string package-full-name: fastn-community.github.io/logo-doc
 optional string license-url: https://github.com/fastn-community/logo-doc/blob/home/LICENSE
 string github: https://github.com/fastn-community/logo-doc/
 module category: fastn-community.github.io/logo-doc
-ftd.image-src image: $assets.files.images.image.svg
+ftd.image-src image: $assets.files.images.logo.svg
 optional string preview-url:
 optional string created-by:
 optional string creator-url:
@@ -38,7 +38,7 @@ $sample-code(a = $home.package-full-name, cname = quote-block)
 logo-list: $data.list-of-logos
 full-name: your full name
 company-name: your full title
-company-logo:$home.image
+company-logo: $home.image
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 
@@ -56,7 +56,7 @@ $sample-code(a = $home.package-full-name, cname = quote-divider)
 logo-list: $data.list-of-logos
 full-name: your full name
 company-name: your full title
-company-logo:$home.image
+company-logo: $home.image
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 
