@@ -1,7 +1,7 @@
 -- import: fastn-community.github.io/logo-doc/data
 
 
--- component logo-quote-block-desktop:
+-- component quote-block-desktop:
 caption title:
 optional body subtitle:
 data.logos list logo-list:
@@ -23,40 +23,40 @@ width.fixed.percent: 50
 background.solid: $inherited.colors.background.base
 
 -- ftd.row:
-if: { logo-quote-block-desktop.title != NULL}
+if: { quote-block-desktop.title != NULL}
 
 
--- ftd.text: $with-quotes(a = $logo-quote-block-desktop.title)
+-- ftd.text: $with-quotes(a = $quote-block-desktop.title)
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 
 -- end: ftd.row
 
 -- ftd.text:
-if: { logo-quote-block-desktop.subtitle != NULL }
+if: { quote-block-desktop.subtitle != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
-$logo-quote-block-desktop.subtitle
+$quote-block-desktop.subtitle
 
 -- ftd.row:
 spacing.fixed.px: 20
 align-content: center
 
 -- ftd.image:
-if: { logo-quote-block-desktop.company-logo !=  NULL }
-src: $logo-quote-block-desktop.company-logo
+if: { quote-block-desktop.company-logo !=  NULL }
+src: $quote-block-desktop.company-logo
 width.fixed.px: 40
 
 -- ftd.column:
 width: fill-container
 
--- ftd.text: $logo-quote-block-desktop.full-name
-if: { logo-quote-block-desktop.full-name != NULL }
+-- ftd.text: $quote-block-desktop.full-name
+if: { quote-block-desktop.full-name != NULL }
 
 
--- ftd.text: $logo-quote-block-desktop.company-name
-if: { logo-quote-block-desktop.full-name != NULL }
+-- ftd.text: $quote-block-desktop.company-name
+if: { quote-block-desktop.full-name != NULL }
 
 -- end: ftd.column
 
@@ -70,7 +70,7 @@ spacing.fixed.px: 40
 width.fixed.percent: 50
 
 -- logo-lists:
-$loop$: $logo-quote-block-desktop.logo-list as $obj
+$loop$: $quote-block-desktop.logo-list as $obj
 logo: $obj.logo
 link: $obj.link
 
@@ -78,7 +78,7 @@ link: $obj.link
 
 -- end: ftd.row
 
--- end: logo-quote-block-desktop
+-- end: quote-block-desktop
 
 
 
@@ -98,7 +98,7 @@ link: $obj.link
 
 
 
--- component logo-quote-block-mobile:
+-- component quote-block-mobile:
 caption title:
 optional body subtitle:
 data.logos list logo-list:
@@ -117,17 +117,17 @@ background.solid: $inherited.colors.background.step-2
 spacing.fixed.px: 17
 padding-top.px: 30
 
--- ftd.text: $logo-quote-block-mobile.title
-if: { logo-quote-block-mobile.title != NULL }
+-- ftd.text: $quote-block-mobile.title
+if: { quote-block-mobile.title != NULL }
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 
 -- ftd.text:
-if: { logo-quote-block-mobile.subtitle != NULL }
+if: { quote-block-mobile.subtitle != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
-$logo-quote-block-mobile.subtitle
+$quote-block-mobile.subtitle
 
 -- end: ftd.column
 
@@ -137,7 +137,7 @@ spacing.fixed.px: 10
 width: fill-container
 
 -- logo-lists:
-$loop$: $logo-quote-block-mobile.logo-list as $obj
+$loop$: $quote-block-mobile.logo-list as $obj
 logo: $obj.logo
 link: $obj.link
 
@@ -145,12 +145,12 @@ link: $obj.link
 
 -- end: ftd.column
 
--- end: logo-quote-block-mobile
+-- end: quote-block-mobile
 
 
 
 
--- component logo-large-title-desktop:
+-- component large-title-desktop:
 caption title:
 optional body subtitle:
 data.logos list logo-list:
@@ -164,18 +164,18 @@ role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
 
--- ftd.text: $logo-large-title-desktop.title
-if: { logo-large-title-desktop.title != NULL }
+-- ftd.text: $large-title-desktop.title
+if: { large-title-desktop.title != NULL }
 style: medium
 max-width.fixed.percent: 70
 role: $inherited.types.heading-large
 
 -- ftd.text:
-if: { logo-large-title-desktop.subtitle != NULL }
+if: { large-title-desktop.subtitle != NULL }
 max-width.fixed.percent: 70
 text-align: center
 
-$logo-large-title-desktop.subtitle
+$large-title-desktop.subtitle
 
 -- ftd.row:
 margin-top.px: 15
@@ -184,7 +184,7 @@ width: fill-container
 overflow-y: auto
 
 -- logo-lists:
-$loop$: $logo-large-title-desktop.logo-list as $obj
+$loop$: $large-title-desktop.logo-list as $obj
 logo: $obj.logo
 link: $obj.link
 
@@ -192,12 +192,12 @@ link: $obj.link
 
 -- end: ftd.column
 
--- end: logo-large-title-desktop
+-- end: large-title-desktop
 
 
 
 
--- component logo-large-title-mobile:
+-- component large-title-mobile:
 caption title:
 optional body subtitle:
 data.logos list logo-list:
@@ -210,17 +210,17 @@ padding-vertical.px: 60
 -- ftd.column:
 spacing.fixed.px: 17
 
--- ftd.text: $logo-large-title-mobile.title
-if: { logo-large-title-mobile.title != NULL }
+-- ftd.text: $large-title-mobile.title
+if: { large-title-mobile.title != NULL }
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 
 -- ftd.text:
-if: { logo-large-title-mobile.subtitle != NULL }
+if: { large-title-mobile.subtitle != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
-$logo-large-title-mobile.subtitle
+$large-title-mobile.subtitle
 
 -- end: ftd.column
 
@@ -229,7 +229,7 @@ spacing.fixed.px: 40
 width: fill-container
 
 -- logo-lists:
-$loop$: $logo-large-title-mobile.logo-list as $obj
+$loop$: $large-title-mobile.logo-list as $obj
 logo: $obj.logo
 link: $obj.link
 
@@ -237,7 +237,7 @@ link: $obj.link
 
 -- end: ftd.column
 
--- end: logo-large-title-mobile
+-- end: large-title-mobile
 
 
 
@@ -246,7 +246,7 @@ link: $obj.link
 
 
 
--- component logo-without-title-desktop:
+-- component without-title-desktop:
 data.logos list logo-list:
 
 -- ftd.row:
@@ -258,18 +258,18 @@ align-content: center
 padding-vertical.px: 100
 
 -- logo-lists:
-$loop$: $logo-without-title-desktop.logo-list as $obj
+$loop$: $without-title-desktop.logo-list as $obj
 logo: $obj.logo
 link: $obj.link
 
 -- end: ftd.row
 
--- end: logo-without-title-desktop
+-- end: without-title-desktop
 
 
 
 
--- component logo-without-title-mobile:
+-- component without-title-mobile:
 data.logos list logo-list:
 
 -- ftd.column:
@@ -279,13 +279,13 @@ spacing.fixed.px: 52
 padding-vertical.px: 60
 
 -- logo-lists:
-$loop$: $logo-without-title-mobile.logo-list as $obj
+$loop$: $without-title-mobile.logo-list as $obj
 logo: $obj.logo
 link: $obj.link
 
 -- end: ftd.column
 
--- end: logo-without-title-mobile
+-- end: without-title-mobile
 
 
 
@@ -321,7 +321,7 @@ link: $logo-lists.link
 
 
 
--- component logo-small-title-desktop:
+-- component small-title-desktop:
 caption title:
 optional body subtitle:
 data.logos list logo-list:
@@ -335,15 +335,15 @@ role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
 
--- ftd.text: $logo-small-title-desktop.title
+-- ftd.text: $small-title-desktop.title
 style: medium
 max-width.fixed.percent: 70
 
 -- ftd.text:
-if: { logo-small-title-desktop.subtitle != NULL }
+if: { small-title-desktop.subtitle != NULL }
 max-width.fixed.percent: 70
 
-$logo-small-title-desktop.subtitle
+$small-title-desktop.subtitle
 
 -- ftd.row:
 margin-top.px: 15
@@ -352,7 +352,7 @@ width: fill-container
 overflow-y: auto
 
 -- logo-lists:
-$loop$: $logo-small-title-desktop.logo-list as $obj
+$loop$: $small-title-desktop.logo-list as $obj
 logo: $obj.logo
 link: $obj.link
 
@@ -360,12 +360,12 @@ link: $obj.link
 
 -- end: ftd.column
 
--- end: logo-small-title-desktop
+-- end: small-title-desktop
 
 
 
 
--- component logo-small-title-mobile:
+-- component small-title-mobile:
 caption title:
 optional body subtitle:
 data.logos list logo-list:
@@ -378,16 +378,16 @@ padding-vertical.px: 60
 -- ftd.column:
 spacing.fixed.px: 17
 
--- ftd.text: $logo-small-title-mobile.title
+-- ftd.text: $small-title-mobile.title
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 
 -- ftd.text:
-if: { logo-small-title-mobile.subtitle != NULL }
+if: { small-title-mobile.subtitle != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
-$logo-small-title-mobile.subtitle
+$small-title-mobile.subtitle
 
 -- end: ftd.column
 
@@ -396,7 +396,7 @@ spacing.fixed.px: 40
 width: fill-container
 
 -- logo-lists:
-$loop$: $logo-small-title-mobile.logo-list as $obj
+$loop$: $small-title-mobile.logo-list as $obj
 logo: $obj.logo
 link: $obj.link
 
@@ -404,11 +404,11 @@ link: $obj.link
 
 -- end: ftd.column
 
--- end: logo-small-title-mobile
+-- end: small-title-mobile
 
 
 
--- component logo-quote-divider-desktop:
+-- component quote-divider-desktop:
 caption title:
 optional body subtitle:
 data.logos list logo-list: 
@@ -427,36 +427,36 @@ background.solid: $inherited.colors.background.step-2
 spacing.fixed.px: 17
 width.fixed.percent: 50
 
--- ftd.text: $logo-quote-divider-desktop.title
-if: { logo-quote-divider-desktop.title != NULL}
+-- ftd.text: $quote-divider-desktop.title
+if: { quote-divider-desktop.title != NULL}
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 
 -- ftd.text:
-if: { logo-quote-divider-desktop.subtitle != NULL }
+if: { quote-divider-desktop.subtitle != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
-$logo-quote-divider-desktop.subtitle
+$quote-divider-desktop.subtitle
 
 -- ftd.row:
 spacing.fixed.px: 20
 align-content: center
 
 -- ftd.image:
-if: { logo-quote-divider-desktop.company-logo !=  NULL }
-src: $logo-quote-divider-desktop.company-logo
+if: { quote-divider-desktop.company-logo !=  NULL }
+src: $quote-divider-desktop.company-logo
 width.fixed.px: 40
 
 -- ftd.column:
 width: fill-container
 
--- ftd.text: $logo-quote-divider-desktop.full-name
-if: { logo-quote-divider-desktop.full-name != NULL }
+-- ftd.text: $quote-divider-desktop.full-name
+if: { quote-divider-desktop.full-name != NULL }
 
 
--- ftd.text: $logo-quote-divider-desktop.company-name
-if: { logo-quote-divider-desktop.full-name != NULL }
+-- ftd.text: $quote-divider-desktop.company-name
+if: { quote-divider-desktop.full-name != NULL }
 
 -- end: ftd.column
 
@@ -470,7 +470,7 @@ spacing.fixed.px: 40
 width.fixed.percent: 50
 
 -- logo-lists:
-$loop$: $logo-quote-divider-desktop.logo-list as $obj
+$loop$: $quote-divider-desktop.logo-list as $obj
 logo: $obj.logo
 link: $obj.link
 
@@ -478,7 +478,7 @@ link: $obj.link
 
 -- end: ftd.row
 
--- end: logo-quote-divider-desktop
+-- end: quote-divider-desktop
 
 
 
@@ -489,7 +489,7 @@ link: $obj.link
 
 
 
--- component logo-quote-divider-mobile:
+-- component quote-divider-mobile:
 caption title:
 optional body subtitle:
 data.logos list logo-list:
@@ -505,16 +505,16 @@ padding-horizontal.px: 24
 spacing.fixed.px: 17
 padding-top.px: 30
 
--- ftd.text: $logo-quote-divider-mobile.title
+-- ftd.text: $quote-divider-mobile.title
 role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 
 -- ftd.text:
-if: { logo-quote-divider-mobile.subtitle != NULL }
+if: { quote-divider-mobile.subtitle != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
-$logo-quote-divider-mobile.subtitle
+$quote-divider-mobile.subtitle
 
 -- end: ftd.column
 
@@ -524,7 +524,7 @@ spacing.fixed.px: 10
 width: fill-container
 
 -- logo-lists:
-$loop$: $logo-quote-divider-mobile.logo-list as $obj
+$loop$: $quote-divider-mobile.logo-list as $obj
 logo: $obj.logo
 link: $obj.link
 
@@ -532,7 +532,7 @@ link: $obj.link
 
 -- end: ftd.column
 
--- end: logo-quote-divider-mobile
+-- end: quote-divider-mobile
 
 
 
