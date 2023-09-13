@@ -34,7 +34,7 @@ license-url: $home.license-url
 
 $sample-code(a = $home.package-full-name, cname = quote-block)
 
--- home.category.logo-quote-block: Title copy goes here
+-- home.category.quote-block: Title copy goes here
 logo-list: $data.list-of-logos
 full-name: your full name
 company-name: your full title
@@ -52,7 +52,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 $sample-code(a = $home.package-full-name, cname = quote-divider)
 
--- home.category.logo-quote-divider: Title copy goes here
+-- home.category.quote-divider: Title copy goes here
 logo-list: $data.list-of-logos
 full-name: your full name
 company-name: your full title
@@ -71,7 +71,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 $sample-code(a = $home.package-full-name, cname = large-title)
 
--- home.category.logo-large-title: Title copy goes here
+-- home.category.large-title: Title copy goes here
 logo-list: $data.list-of-logos
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -80,13 +80,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 -- end: cdc.preview
 
--- cdc.preview:Logo Small Title
+-- cdc.preview: Logo Small Title
 
 -- cdc.code-with-preview:
 
 $sample-code(a = $home.package-full-name, cname = small-title)
 
--- home.category.logo-small-title: Title copy goes here
+-- home.category.small-title: Title copy goes here
 logo-list: $data.list-of-logos
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -101,7 +101,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 $sample-code(a = $home.package-full-name, cname = without-title)
 
--- home.category.logo-without-title:
+-- home.category.without-title:
 logo-list: $data.list-of-logos
 
 -- end: cdc.code-with-preview

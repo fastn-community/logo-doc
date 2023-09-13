@@ -15,7 +15,7 @@ created-by: Priyanka
 
 
 
--- component logo-quote-block:
+-- component quote-block:
 caption title:
 optional body subtitle:
 data.logos list logo-list: 
@@ -28,29 +28,29 @@ width: fill-container
 
 -- ftd.desktop:
 
--- lib.logo-quote-block-desktop: $logo-quote-block.title
-subtitle: $logo-quote-block.subtitle
-logo-list: $logo-quote-block.logo-list
-full-name: $logo-quote-block.full-name
-company-name: $logo-quote-block.company-name
-company-logo: $logo-quote-block.company-logo
+-- lib.quote-block-desktop: $quote-block.title
+subtitle: $quote-block.subtitle
+logo-list: $quote-block.logo-list
+full-name: $quote-block.full-name
+company-name: $quote-block.company-name
+company-logo: $quote-block.company-logo
 
 -- end: ftd.desktop
 
 -- ftd.mobile:
 
--- lib.logo-quote-block-mobile: $logo-quote-block.title
-subtitle: $logo-quote-block.subtitle
-logo-list: $logo-quote-block.logo-list
-full-name: $logo-quote-block.full-name
-company-name: $logo-quote-block.company-name
-company-logo: $logo-quote-block.company-logo
+-- lib.quote-block-mobile: $quote-block.title
+subtitle: $quote-block.subtitle
+logo-list: $quote-block.logo-list
+full-name: $quote-block.full-name
+company-name: $quote-block.company-name
+company-logo: $quote-block.company-logo
 
 -- end: ftd.mobile
 
 -- end: ftd.column
 
--- end: logo-quote-block
+-- end: quote-block
 
 
 
@@ -67,7 +67,7 @@ company-logo: $logo-quote-block.company-logo
 
 
 
--- component logo-large-title:
+-- component large-title:
 caption title:
 optional body subtitle:
 data.logos list logo-list:
@@ -78,23 +78,23 @@ width: fill-container
 
 -- ftd.desktop:
 
--- lib.logo-large-title-desktop: $logo-large-title.title
-subtitle: $logo-large-title.subtitle
-logo-list: $logo-large-title.logo-list
+-- lib.large-title-desktop: $large-title.title
+subtitle: $large-title.subtitle
+logo-list: $large-title.logo-list
 
 -- end: ftd.desktop
 
 -- ftd.mobile:
 
--- lib.logo-large-title-mobile: $logo-large-title.title
-subtitle: $logo-large-title.subtitle
-logo-list: $logo-large-title.logo-list
+-- lib.large-title-mobile: $large-title.title
+subtitle: $large-title.subtitle
+logo-list: $large-title.logo-list
 
 -- end: ftd.mobile
 
 -- end: ftd.column
 
--- end: logo-large-title
+-- end: large-title
 
 
 
@@ -109,7 +109,7 @@ logo-list: $logo-large-title.logo-list
 
 
 
--- component logo-without-title:
+-- component without-title:
 data.logos list logo-list:
 
 -- ftd.column:
@@ -117,21 +117,21 @@ width: fill-container
 
 -- ftd.desktop:
 
--- lib.logo-without-title-desktop:
-logo-list: $logo-without-title.logo-list
+-- lib.without-title-desktop:
+logo-list: $without-title.logo-list
 
 -- end: ftd.desktop
 
 -- ftd.mobile:
 
--- lib.logo-without-title-mobile: 
-logo-list: $logo-without-title.logo-list
+-- lib.without-title-mobile:
+logo-list: $without-title.logo-list
 
 -- end: ftd.mobile
 
 -- end: ftd.column
 
--- end: logo-without-title
+-- end: without-title
 
 
 
@@ -144,7 +144,7 @@ logo-list: $logo-without-title.logo-list
 
 
 
--- component logo-small-title:
+-- component small-title:
 caption title:
 optional body subtitle:
 data.logos list logo-list:
@@ -154,23 +154,23 @@ width: fill-container
 
 -- ftd.desktop:
 
--- lib.logo-small-title-desktop: $logo-small-title.title
-subtitle: $logo-small-title.subtitle
-logo-list: $logo-small-title.logo-list
+-- lib.small-title-desktop: $small-title.title
+subtitle: $small-title.subtitle
+logo-list: $small-title.logo-list
 
 -- end: ftd.desktop
 
 -- ftd.mobile:
 
--- lib.logo-small-title-mobile: $logo-small-title.title
-subtitle: $logo-small-title.subtitle
-logo-list: $logo-small-title.logo-list
+-- lib.small-title-mobile: $small-title.title
+subtitle: $small-title.subtitle
+logo-list: $small-title.logo-list
 
 -- end: ftd.mobile
 
 -- end: ftd.column
 
--- end: logo-small-title
+-- end: small-title
 
 
 
@@ -183,7 +183,7 @@ logo-list: $logo-small-title.logo-list
 
 
 
--- component logo-quote-divider:
+-- component quote-divider:
 caption title:
 optional body subtitle:
 data.logos list logo-list: 
@@ -198,23 +198,23 @@ width: fill-container
 
 -- ftd.desktop:
 
--- lib.logo-quote-divider-desktop: $logo-quote-divider.title
-subtitle: $logo-quote-divider.subtitle
-logo-list: $logo-quote-divider.logo-list
-full-name: $logo-quote-divider.full-name
-company-name: $logo-quote-divider.company-name
-company-logo: $logo-quote-divider.company-logo
+-- lib.quote-divider-desktop: $quote-divider.title
+subtitle: $quote-divider.subtitle
+logo-list: $quote-divider.logo-list
+full-name: $quote-divider.full-name
+company-name: $quote-divider.company-name
+company-logo: $quote-divider.company-logo
 
 -- end: ftd.desktop
 
 -- ftd.mobile:
 
--- lib.logo-quote-divider-mobile: $logo-quote-divider.title
-subtitle: $logo-quote-divider.subtitle
-logo-list: $logo-quote-divider.logo-list
+-- lib.quote-divider-mobile: $quote-divider.title
+subtitle: $quote-divider.subtitle
+logo-list: $quote-divider.logo-list
 
 -- end: ftd.mobile
 
 -- end: ftd.column
 
--- end: logo-quote-divider
+-- end: quote-divider
