@@ -1,0 +1,220 @@
+-- import: fastn-community.github.io/logo-doc/docs
+-- import: fastn-community.github.io/logo-doc/data
+-- import: fastn-community.github.io/logo-doc/lib
+
+-- docs.home:
+created-by: Priyanka
+
+
+
+
+
+
+
+
+
+
+
+-- component logo-quote-block:
+caption title:
+optional body subtitle:
+data.logos list logo-list: 
+optional string full-name:
+optional string company-name:
+optional ftd.image-src company-logo:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- lib.logo-quote-block-desktop: $logo-quote-block.title
+subtitle: $logo-quote-block.subtitle
+logo-list: $logo-quote-block.logo-list
+full-name: $logo-quote-block.full-name
+company-name: $logo-quote-block.company-name
+company-logo: $logo-quote-block.company-logo
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- lib.logo-quote-block-mobile: $logo-quote-block.title
+subtitle: $logo-quote-block.subtitle
+logo-list: $logo-quote-block.logo-list
+full-name: $logo-quote-block.full-name
+company-name: $logo-quote-block.company-name
+company-logo: $logo-quote-block.company-logo
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: logo-quote-block
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component logo-large-title:
+caption title:
+optional body subtitle:
+data.logos list logo-list:
+
+-- ftd.column:
+width: fill-container
+
+
+-- ftd.desktop:
+
+-- lib.logo-large-title-desktop: $logo-large-title.title
+subtitle: $logo-large-title.subtitle
+logo-list: $logo-large-title.logo-list
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- lib.logo-large-title-mobile: $logo-large-title.title
+subtitle: $logo-large-title.subtitle
+logo-list: $logo-large-title.logo-list
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: logo-large-title
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component logo-without-title:
+data.logos list logo-list:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- lib.logo-without-title-desktop:
+logo-list: $logo-without-title.logo-list
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- lib.logo-without-title-mobile: 
+logo-list: $logo-without-title.logo-list
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: logo-without-title
+
+
+
+
+
+
+
+
+
+
+
+
+-- component logo-small-title:
+caption title:
+optional body subtitle:
+data.logos list logo-list:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- lib.logo-small-title-desktop: $logo-small-title.title
+subtitle: $logo-small-title.subtitle
+logo-list: $logo-small-title.logo-list
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- lib.logo-small-title-mobile: $logo-small-title.title
+subtitle: $logo-small-title.subtitle
+logo-list: $logo-small-title.logo-list
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: logo-small-title
+
+
+
+
+
+
+
+
+
+
+
+
+-- component logo-quote-divider:
+caption title:
+optional body subtitle:
+data.logos list logo-list: 
+optional string full-name:
+optional string company-name:
+optional ftd.image-src company-logo:
+
+
+-- ftd.column:
+width: fill-container
+
+
+-- ftd.desktop:
+
+-- lib.logo-quote-divider-desktop: $logo-quote-divider.title
+subtitle: $logo-quote-divider.subtitle
+logo-list: $logo-quote-divider.logo-list
+full-name: $logo-quote-divider.full-name
+company-name: $logo-quote-divider.company-name
+company-logo: $logo-quote-divider.company-logo
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- lib.logo-quote-divider-mobile: $logo-quote-divider.title
+subtitle: $logo-quote-divider.subtitle
+logo-list: $logo-quote-divider.logo-list
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: logo-quote-divider

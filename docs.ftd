@@ -1,0 +1,216 @@
+-- import: fastn-community.github.io/logo-doc
+-- import: fastn-community.github.io/logo-doc/data
+-- import: cdc
+
+
+-- component home:
+string package-name: logo-doc
+string package-full-name: fastn-community.github.io/logo-doc
+optional string license-url: https://github.com/fastn-community/logo-doc/blob/home/LICENSE
+string github: https://github.com/fastn-community/logo-doc/
+module category: fastn-community.github.io/logo-doc
+ftd.image-src image: $assets.files.images.logo.svg
+optional string preview-url:
+optional string created-by:
+optional string creator-url:
+optional body description:
+ftd.type-data types: $inherited.types
+
+-- cdc.page:
+
+-- cdc.hero-section: $home.package-name
+creator-name: $home.created-by
+creator-url: $home.created-by
+cta-primary-text: View more hero designs
+cta-primary-link: https://fastn.com/featured/
+cta-secondary-text: Preview
+cta-secondary-link: $home.preview-url
+github-url: $home.github
+license-url: $home.license-url
+
+-- cdc.preview: Logo Quote Block
+
+-- cdc.code-with-preview:
+
+$sample-code(a = $home.package-full-name, cname = quote-block)
+
+-- home.category.logo-quote-block: Title copy goes here
+logo-list: $data.list-of-logos
+full-name: your full name
+company-name: your full title
+company-logo: $home.image
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+
+-- end: cdc.code-with-preview
+
+-- end: cdc.preview
+
+-- cdc.preview: Logo Quote Divider
+
+-- cdc.code-with-preview:
+
+$sample-code(a = $home.package-full-name, cname = quote-divider)
+
+-- home.category.logo-quote-divider: Title copy goes here
+logo-list: $data.list-of-logos
+full-name: your full name
+company-name: your full title
+company-logo: $home.image
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+
+-- end: cdc.code-with-preview
+
+-- end: cdc.preview
+
+
+-- cdc.preview: Logo Large Title
+
+-- cdc.code-with-preview:
+
+$sample-code(a = $home.package-full-name, cname = large-title)
+
+-- home.category.logo-large-title: Title copy goes here
+logo-list: $data.list-of-logos
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+-- end: cdc.code-with-preview
+
+-- end: cdc.preview
+
+-- cdc.preview:Logo Small Title
+
+-- cdc.code-with-preview:
+
+$sample-code(a = $home.package-full-name, cname = small-title)
+
+-- home.category.logo-small-title: Title copy goes here
+logo-list: $data.list-of-logos
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+
+-- end: cdc.code-with-preview
+
+-- end: cdc.preview
+
+-- cdc.preview: Logo Without Title
+
+-- cdc.code-with-preview:
+
+$sample-code(a = $home.package-full-name, cname = without-title)
+
+-- home.category.logo-without-title:
+logo-list: $data.list-of-logos
+
+-- end: cdc.code-with-preview
+
+-- end: cdc.preview
+
+-- cdc.overview: Properties
+
+-- cdc.component-property: `title`
+type: caption (`required`)
+
+It's used to define the title for your logo component.
+
+-- cdc.component-property: `subtitle`
+type: body (`optional`)
+
+It's used to define the subtitle for your logo component.
+
+-- cdc.component-property: `logo-list`
+type: list (`required`)
+
+It's used to define the logo list for your logo component.
+
+-- cdc.component-property: `full-name`
+type: string (`optional`)
+
+It's used to define the full name for your logo component.
+
+-- cdc.component-property: `company-name`
+type: string (`optional`)
+
+It's used to define the company name for your logo component.
+
+-- cdc.component-property: `company-logo`
+type: ftd.image-src (`optional`)
+
+It's used to define the company logo for your logo component.
+
+-- end: cdc.overview
+
+
+-- end: cdc.page
+
+
+-- end: home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- string sample-code(a,cname):
+string a:
+string cname:
+
+"\;; In FASTN.ftd \\n"
++ "-- fastn.dependency:" + a + "\\n\\n"
++ "\;; In the file where you want to add the header (e.g., `index.ftd`)\\n\\n"
++ "\;; Add this at the top of the file\\n"
++ "-- import: " + a + " as hero\\n\\n"
++ "\;; Add this where you want to show the component\\n"
++ "-- hero." + cname +": Title copy goes here\\n"
++ "logo-list: list-logo\\n"
++ "full-name: Your name \\n"
++ "company-name: Your company name\\n"
++ "company-logo: $assets.files.image.svg\\n\\1"
++ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum. Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum erat."
+
+
+
+-- string sample-code-without-image(a,cname):
+string a:
+string cname:
+
+"\;; In FASTN.ftd \\n"
++ "-- fastn.dependency:" + a + "\\n\\n"
++ "\;; In the file where you want to add the header (e.g., `index.ftd`)\\n\\n"
++ "\;; Add this at the top of the file\\n"
++ "-- import: " + a + " as hero\\n\\n"
++ "\;; Add this where you want to show the component\\n"
++ "-- hero." + cname +": Title copy goes here\\n"
++ "cta-primary-text: View more\\n"
++ "cta-primary-url: /\\n"
++ "cta-secondary-text: Preview\\n"
++ "cta-secondary-url: /\\n"
++ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum. Proin viverra nulla sem, vel molestie lacus volutpat nec. Integer ut bibendum erat."
