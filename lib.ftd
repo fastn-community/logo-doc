@@ -41,11 +41,11 @@ color: $inherited.colors.text-strong
 -- end: ftd.row
 
 -- ftd.text:
-if: { logo-quote-block-desktop.body != NULL }
+if: { logo-quote-block-desktop.subtitle != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
-$logo-quote-block-desktop.body
+$logo-quote-block-desktop.subtitle
 
 -- ftd.row:
 
@@ -105,7 +105,7 @@ link: $obj.link
 
 -- component logo-quote-block-mobile:
 caption title:
-optional body body:
+optional body subtitle:
 data.logos list logo-list:
 optional string full-name:
 optional string company-name:
@@ -128,11 +128,11 @@ role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 
 -- ftd.text:
-if: { logo-quote-block-mobile.body != NULL }
+if: { logo-quote-block-mobile.subtitle != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
-$logo-quote-block-mobile.body
+$logo-quote-block-mobile.subtitle
 
 -- end: ftd.column
 
@@ -157,7 +157,7 @@ link: $obj.link
 
 -- component logo-large-title-desktop:
 caption title:
-optional body body:
+optional body subtitle:
 data.logos list logo-list:
 
 -- ftd.column:
@@ -176,11 +176,11 @@ max-width.fixed.percent: 70
 role: $inherited.types.heading-large
 
 -- ftd.text:
-if: { logo-large-title-desktop.body != NULL }
+if: { logo-large-title-desktop.subtitle != NULL }
 max-width.fixed.percent: 70
 text-align: center
 
-$logo-large-title-desktop.body
+$logo-large-title-desktop.subtitle
 
 -- ftd.row:
 margin-top.px: 15
@@ -204,7 +204,7 @@ link: $obj.link
 
 -- component logo-large-title-mobile:
 caption title:
-optional body body:
+optional body subtitle:
 data.logos list logo-list:
 
 -- ftd.column:
@@ -221,11 +221,11 @@ role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 
 -- ftd.text:
-if: { logo-large-title-mobile.body != NULL }
+if: { logo-large-title-mobile.subtitle != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
-$logo-large-title-mobile.body
+$logo-large-title-mobile.subtitle
 
 -- end: ftd.column
 
@@ -328,7 +328,7 @@ link: $logo-lists.link
 
 -- component logo-small-title-desktop:
 caption title:
-optional body body:
+optional body subtitle:
 data.logos list logo-list:
 
 -- ftd.column:
@@ -345,10 +345,10 @@ style: medium
 max-width.fixed.percent: 70
 
 -- ftd.text:
-if: { logo-small-title-desktop.body != NULL }
+if: { logo-small-title-desktop.subtitle != NULL }
 max-width.fixed.percent: 70
 
-$logo-small-title-desktop.body
+$logo-small-title-desktop.subtitle
 
 -- ftd.row:
 margin-top.px: 15
@@ -372,7 +372,7 @@ link: $obj.link
 
 -- component logo-small-title-mobile:
 caption title:
-optional body body:
+optional body subtitle:
 data.logos list logo-list:
 
 -- ftd.column:
@@ -388,11 +388,11 @@ role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 
 -- ftd.text:
-if: { logo-small-title-mobile.body != NULL }
+if: { logo-small-title-mobile.subtitle != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
-$logo-small-title-mobile.body
+$logo-small-title-mobile.subtitle
 
 -- end: ftd.column
 
@@ -415,7 +415,7 @@ link: $obj.link
 
 -- component logo-quote-divider-desktop:
 caption title:
-optional body body:
+optional body subtitle:
 data.logos list logo-list: 
 optional string full-name:
 optional string company-name:
@@ -438,11 +438,11 @@ role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 
 -- ftd.text:
-if: { logo-quote-divider-desktop.body != NULL }
+if: { logo-quote-divider-desktop.subtitle != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
-$logo-quote-divider-desktop.body
+$logo-quote-divider-desktop.subtitle
 
 -- ftd.row:
 
@@ -493,7 +493,7 @@ link: $obj.link
 
 -- component logo-quote-divider-mobile:
 caption title:
-body body:
+optional body subtitle:
 data.logos list logo-list:
 
 -- ftd.column:
@@ -512,10 +512,11 @@ role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 
 -- ftd.text:
+if: { logo-quote-divider-mobile.subtitle != NULL }
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 
-$logo-quote-divider-mobile.body
+$logo-quote-divider-mobile.subtitle
 
 -- end: ftd.column
 

@@ -4,7 +4,6 @@
 
 -- docs.home:
 created-by: Priyanka
-preview-url: preview/
 
 
 
@@ -80,7 +79,7 @@ width: fill-container
 -- ftd.desktop:
 
 -- lib.logo-large-title-desktop: $logo-large-title.title
-body: $logo-large-title.subtitle
+subtitle: $logo-large-title.subtitle
 logo-list: $logo-large-title.logo-list
 
 -- end: ftd.desktop
@@ -88,7 +87,7 @@ logo-list: $logo-large-title.logo-list
 -- ftd.mobile:
 
 -- lib.logo-large-title-mobile: $logo-large-title.title
-body: $logo-large-title.subtitle
+subtitle: $logo-large-title.subtitle
 logo-list: $logo-large-title.logo-list
 
 -- end: ftd.mobile
@@ -147,7 +146,7 @@ logo-list: $logo-without-title.logo-list
 
 -- component logo-small-title:
 caption title:
-optional body body:
+optional body subtitle:
 data.logos list logo-list:
 
 -- ftd.column:
@@ -156,7 +155,7 @@ width: fill-container
 -- ftd.desktop:
 
 -- lib.logo-small-title-desktop: $logo-small-title.title
-body: $logo-small-title.body
+subtitle: $logo-small-title.subtitle
 logo-list: $logo-small-title.logo-list
 
 -- end: ftd.desktop
@@ -164,7 +163,7 @@ logo-list: $logo-small-title.logo-list
 -- ftd.mobile:
 
 -- lib.logo-small-title-mobile: $logo-small-title.title
-body: $logo-small-title.body
+subtitle: $logo-small-title.subtitle
 logo-list: $logo-small-title.logo-list
 
 -- end: ftd.mobile
@@ -200,7 +199,7 @@ width: fill-container
 -- ftd.desktop:
 
 -- lib.logo-quote-divider-desktop: $logo-quote-divider.title
-body: $logo-quote-divider.subtitle
+subtitle: $logo-quote-divider.subtitle
 logo-list: $logo-quote-divider.logo-list
 full-name: $logo-quote-divider.full-name
 company-name: $logo-quote-divider.company-name
@@ -211,7 +210,7 @@ company-logo: $logo-quote-divider.company-logo
 -- ftd.mobile:
 
 -- lib.logo-quote-divider-mobile: $logo-quote-divider.title
-body: $logo-quote-divider.subtitle
+subtitle: $logo-quote-divider.subtitle
 logo-list: $logo-quote-divider.logo-list
 
 -- end: ftd.mobile
@@ -219,12 +218,3 @@ logo-list: $logo-quote-divider.logo-list
 -- end: ftd.column
 
 -- end: logo-quote-divider
-
-
-
-
-
-
-
-
-

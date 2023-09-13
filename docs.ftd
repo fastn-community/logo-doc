@@ -111,7 +111,7 @@ logo-list: $data.list-of-logos
 -- cdc.overview: Properties
 
 -- cdc.component-property: `title`
-type: caption  (`required`)
+type: caption (`required`)
 
 It's used to define the title for your logo component.
 
